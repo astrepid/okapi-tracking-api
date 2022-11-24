@@ -1,18 +1,23 @@
-# API Java pour l'API Suivi v2 de La Poste.
+# Okapi Tracking API
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.dajlab/laposte-suivi-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.dajlab/laposte-suivi-api)
+Okapi Tracking API is a simple and resilient wrapper library for the state-owned French logistical carrier's new parcel/mail tracking API (Okapi).
 
-Voir https://developer.laposte.fr/products/suivi/latest pour plus d'informations sur l'API officielle Suivi de La Poste.
+> Visit https://developer.laposte.fr/products/suivi/latest for more information about the official API.
 
-
-## Cas d'utilisation
+## Use case
 
 Pour obtenir le suivi d'un courrier, Colissimo ou Chronopost :
 
 ```java
-ILaPosteService service = new LaPosteServiceImpl("cleOkapi");
+import com.astrepid.okapi.IOkapiService;
+import com.astrepid.okapi.OkapiServiceImpl;
+import com.astrepid.okapi.tracking.OkapiTracking;
 
-LPSuivi suivi = service.getSuivi("4P36275770836");
+class Main {
+    IOkapiService service = new OkapiServiceImpl("YOUR_API_KEY");
+
+    OkapiTracking instance = service.getTracking("TRACKING_NUMBER");
+}
 ```
 
-Pour exécuter les tests, vous devez vous munir d'une clé sandbox.
+To execute the tests, you'll need a valid sandbox API key. You can get one by registering on https://developer.laposte.fr.
