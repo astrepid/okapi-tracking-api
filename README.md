@@ -26,9 +26,9 @@ class Main {
 }
 ```
 
-To execute the tests, you need a valid sandbox API key. You can get one by registering on https://developer.laposte.fr.
+To execute the tests, you need a valid sandbox API key. You can get one by registering [here](https://developer.laposte.fr).
 
 ## Authors
 
-* **Astrepid** - *Multi-tracking, resilience, translation, etc* - [astreid.com](https://astrepid.com)
+* **Astrepid** - *Multi-tracking, resilience, translation, etc* - [astrepid.com](https://astrepid.com)
 * **DaJlab** - *Initial work* - [dajlab.org](https://dajlab.org)
