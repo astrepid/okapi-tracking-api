@@ -2,11 +2,17 @@
 
 Okapi Tracking API is a simple and resilient wrapper library for the state-owned French logistical carrier's new parcel/mail tracking API (Okapi).
 
-> Visit https://developer.laposte.fr/products/suivi/latest for more information about the official API.
+> Click [here](https://developer.laposte.fr/products/suivi/latest) to learn more about the official API.
+
+## Requirements
+
+- Java 17+;
+- Maven 3.8.1+
+- A valid API key (see [Okapi > Applications](https://developer.laposte.fr/applications))
 
 ## Use case
 
-Pour obtenir le suivi d'un courrier, Colissimo ou Chronopost :
+To track a parcel or a mail, you need to call the `getTracking` method with the parcel's tracking number as a parameter:
 
 ```java
 import com.astrepid.okapi.IOkapiService;
@@ -20,4 +26,9 @@ class Main {
 }
 ```
 
-To execute the tests, you'll need a valid sandbox API key. You can get one by registering on https://developer.laposte.fr.
+To execute the tests, you need a valid sandbox API key. You can get one by registering on https://developer.laposte.fr.
+
+## Authors
+
+* **Astrepid** - *Multi-tracking, resilience, translation, etc* - [astreid.com](https://astrepid.com)
+* **DaJlab** - *Initial work* - [dajlab.org](https://dajlab.org)
