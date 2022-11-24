@@ -14,12 +14,12 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.astrepid.okapi.domain;
+package com.astrepid.okapi.tracking;
 
 /**
  * Langue de éponse.
  */
-public enum OTLanguage {
+public enum OTLang {
 
     fr_FR, de_DE, en_GB, es_ES, it_IT, nl_NL
 }

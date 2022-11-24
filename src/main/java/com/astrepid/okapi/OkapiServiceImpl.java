@@ -16,13 +16,13 @@
  */
 package com.astrepid.okapi;
 
-import com.astrepid.okapi.domain.OkapiTracking;
+import com.astrepid.okapi.tracking.OTException;
+import com.astrepid.okapi.tracking.OTLang;
+import com.astrepid.okapi.tracking.OkapiTracking;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import com.astrepid.okapi.domain.OTLanguage;
-import com.astrepid.okapi.domain.OTException;
 
 import java.util.Arrays;
 import java.util.List;
@@ -70,7 +70,7 @@ public class OkapiServiceImpl implements IOkapiService {
      * {@inheritDoc}
      */
     @Override
-    public OkapiTracking getTracking(String numeroSuivi, OTLanguage langue) throws OTException {
+    public OkapiTracking getTracking(String numeroSuivi, OTLang langue) throws OTException {
         String url = URL + numeroSuivi;
         if (langue != null) {
             url += "?lang=" + langue.name();
@@ -89,7 +89,7 @@ public class OkapiServiceImpl implements IOkapiService {
      * {@inheritDoc}
      */
     @Override
-    public List<OkapiTracking> getTracking(List<String> numerosSuivi, OTLanguage langue) throws OTException {
+    public List<OkapiTracking> getTracking(List<String> numerosSuivi, OTLang langue) throws OTException {
         if (numerosSuivi == null || numerosSuivi.isEmpty()) {
             throw new OTException("La liste des numéros de suivi ne doit pas être vide");
         }

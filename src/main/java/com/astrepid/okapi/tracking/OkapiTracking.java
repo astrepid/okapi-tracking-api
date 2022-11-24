@@ -14,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.astrepid.okapi.domain;
+package com.astrepid.okapi.tracking;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -27,7 +27,7 @@ public class OkapiTracking {
     /**
      * Langue de réponse.
      */
-    private OTLanguage lang;
+    private OTLang lang;
 
     /**
      * Contexte d’appel du service.
@@ -57,14 +57,14 @@ public class OkapiTracking {
     /**
      * @return the lang
      */
-    public OTLanguage getLang() {
+    public OTLang getLang() {
         return lang;
     }
 
     /**
      * @param lang the lang to set
      */
-    public void setLang(OTLanguage lang) {
+    public void setLang(OTLang lang) {
         this.lang = lang;
     }
 
