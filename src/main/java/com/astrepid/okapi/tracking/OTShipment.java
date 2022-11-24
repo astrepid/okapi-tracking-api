@@ -22,52 +22,52 @@ import java.util.Calendar;
 import java.util.List;
 
 /**
- * Détail de l’objet.
+ * Shipment information.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OTShipment {
 
     /**
-     * Métier en charge de l'objet.
+     * Shipment holder.
      */
     private Integer holder;
     /**
-     * Identifiant métier de l'objet.
+     * Shipment reference.
      */
     private String idShip;
     /**
-     * URL vers le suivi web détaillé.
+     * Shipment tracking URL.
      */
     private String urlDetail;
     /**
-     * Dénomination du produit.
+     * Shipment name.
      */
     private String product;
     /**
-     * Objet est-il au statut final ?
+     * Is it in a final state?
      */
     private boolean isFinal;
     /**
-     * Date de prise en charge.
+     * Date of entry.
      */
     private Calendar entryDate;
     /**
-     * Date de livraison.
+     * Date of delivery (exit).
      */
     private Calendar deliveryDate;
 
     /**
-     * Liste des évènements - Fournie selon un ordre anti-chronologique.
+     * List of events (anti-chronological).
      */
     private List<OTEvent> event;
 
     /**
-     * Objet définissant la timeline.
+     * Timeline of the shipment.
      */
     private List<OTTimeline> timeline;
 
     /**
-     * Informations supplémentaires.
+     * Context of the shipment.
      */
     private OTContextData contextData;
 

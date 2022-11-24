@@ -22,7 +22,7 @@ import com.astrepid.okapi.tracking.OkapiTracking;
 class Main {
     IOkapiService service = new OkapiServiceImpl("YOUR_API_KEY");
 
-    OkapiTracking instance = service.getTracking("TRACKING_NUMBER");
+    OkapiTracking tracking = service.getTracking("TRACKING_NUMBER");
 }
 ```
 

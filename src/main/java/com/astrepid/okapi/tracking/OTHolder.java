@@ -19,7 +19,7 @@ package com.astrepid.okapi.tracking;
 import com.fasterxml.jackson.annotation.JsonCreator;
 
 /**
- * Métier en charge de l'objet.
+ * Holder of the package/parcel/letter.
  */
 public enum OTHolder {
 

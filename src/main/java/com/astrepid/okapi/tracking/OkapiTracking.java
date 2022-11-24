@@ -19,38 +19,38 @@ package com.astrepid.okapi.tracking;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * Suivi.
+ * Tracking.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OkapiTracking {
 
     /**
-     * Langue de réponse.
+     * Answer language.
      */
     private OTLang lang;
 
     /**
-     * Contexte d’appel du service.
+     * Service call context.
      */
     private String scope;
 
     /**
-     * Code retour.
+     * Return code
      */
     private Integer returnCode;
 
     /**
-     * Détail de l’objet - Null si returnCode != 2XX.
+     * Shipment details - Null if returnCode != 2XX.
      */
     private OTShipment shipment;
 
     /**
-     * Message d’erreur - Null si returnCode = 200.
+     * Error code - Null if returnCode = 200.
      */
     private String returnMessage;
 
     /**
-     * Objet demandé - Null si returnCode = 200.
+     * Requested tracking number - Null if returnCode = 200.
      */
     private String idShip;
 

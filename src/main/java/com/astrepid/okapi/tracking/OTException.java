@@ -30,7 +30,7 @@ public class OTException extends Exception {
     private static final long serialVersionUID = -3628661762252800339L;
 
     /**
-     * Constructeur.
+     * Constructor.
      *
      * @param message message
      */

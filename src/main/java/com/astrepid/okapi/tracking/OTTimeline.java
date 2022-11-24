@@ -21,38 +21,38 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Calendar;
 
 /**
- * Objet définissant la timeline. <br>
- * Les étapes 1 à 5 sont présentes.
+ * Object defining a Timeline <br>
+ * States from 1 to 5 are defined.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OTTimeline {
 
     /**
-     * Identifiant de l'étape.
+     * Stage id.
      */
     private Integer id;
     /**
-     * Libellé court.
+     * Stage name (short).
      */
     private String shortLabel;
     /**
-     * Libellé Long.
+     * Stage name (long).
      */
     private String longLabel;
     /**
-     * Date de l’évènement.
+     * Stage date.
      */
     private Calendar date;
     /**
-     * Code iso du pays de l’étape.
+     * Stage ISO country code.
      */
     private String country;
     /**
-     * Etat actif ou non de l’étape.
+     * Is this stage active (gone through).
      */
     private boolean status;
     /**
-     * Type d’action.
+     * Action type.
      */
     private OTActionType type;
 

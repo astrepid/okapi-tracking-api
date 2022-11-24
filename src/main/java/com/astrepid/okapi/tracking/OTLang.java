@@ -17,7 +17,7 @@
 package com.astrepid.okapi.tracking;
 
 /**
- * Langue de éponse.
+ * Language.
  */
 public enum OTLang {
 

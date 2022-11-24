@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
 public class OkapiServiceImpl implements IOkapiService {
 
     /**
-     * URL du webservice.
+     * URL of the API.
      */
     private static final String URL = "https://api.laposte.fr/suivi/v2/idships/";
 
@@ -45,7 +45,7 @@ public class OkapiServiceImpl implements IOkapiService {
     private final String KEY;
 
     /**
-     * Constructeur.
+     * Constructor.
      *
      * @param okapiKey private Okapi key
      */
@@ -70,10 +70,10 @@ public class OkapiServiceImpl implements IOkapiService {
      * {@inheritDoc}
      */
     @Override
-    public OkapiTracking getTracking(String numeroSuivi, OTLang langue) throws OTException {
+    public OkapiTracking getTracking(String numeroSuivi, OTLang lang) throws OTException {
         String url = URL + numeroSuivi;
-        if (langue != null) {
-            url += "?lang=" + langue.name();
+        if (lang != null) {
+            url += "?lang=" + lang.name();
         }
         try {
             String output = callRestService(url);
@@ -89,7 +89,7 @@ public class OkapiServiceImpl implements IOkapiService {
      * {@inheritDoc}
      */
     @Override
-    public List<OkapiTracking> getTracking(List<String> numerosSuivi, OTLang langue) throws OTException {
+    public List<OkapiTracking> getTracking(List<String> numerosSuivi, OTLang lang) throws OTException {
         if (numerosSuivi == null || numerosSuivi.isEmpty()) {
             throw new OTException("La liste des numéros de suivi ne doit pas être vide");
         }
@@ -98,7 +98,7 @@ public class OkapiServiceImpl implements IOkapiService {
         numerosSuivi = numerosSuivi.stream().distinct().collect(Collectors.toList());
 
         if (numerosSuivi.size() == 1) {
-            return List.of(getTracking(numerosSuivi.get(0), langue));
+            return List.of(getTracking(numerosSuivi.get(0), lang));
         }
 
         if (numerosSuivi.size() > 10) {
@@ -106,8 +106,8 @@ public class OkapiServiceImpl implements IOkapiService {
         }
 
         String url = URL + String.join(",", numerosSuivi);
-        if (langue != null) {
-            url += "?lang=" + langue.name();
+        if (lang != null) {
+            url += "?lang=" + lang.name();
         }
         try {
             String output = callRestService(url);

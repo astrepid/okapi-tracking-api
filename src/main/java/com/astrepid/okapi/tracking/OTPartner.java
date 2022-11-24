@@ -19,23 +19,23 @@ package com.astrepid.okapi.tracking;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * Info sur poste internationale.
+ * Information about the partner (foreign).
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OTPartner {
 
     /**
-     * Nom du partenaire.
+     * Partner name.
      */
     private String name;
 
     /**
-     * Réseau du partenaire.
+     * Partner network.
      */
     private String network;
 
     /**
-     * Id objet chez le partenaire.
+     * Partner parcel reference.
      */
     private String reference;
 

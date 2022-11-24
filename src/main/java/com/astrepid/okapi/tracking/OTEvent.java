@@ -21,17 +21,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Calendar;
 
 /**
- * Evènement.
+ * Event.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OTEvent {
 
     /**
-     * Date de l'évènement.
+     * Date of the event.
      */
     private Calendar date;
     /**
-     * Message de l'évènement - Texte riche.
+     * Message of the event - rich text.
      */
     private String label;
     /**

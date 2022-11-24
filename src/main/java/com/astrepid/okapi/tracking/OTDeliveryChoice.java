@@ -19,13 +19,13 @@ package com.astrepid.okapi.tracking;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * Liste des services disponibles.
+ * Available services
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OTDeliveryChoice {
 
     /**
-     * Modification de livraison.
+     * Delivery choice (modification request).
      */
     private OTCodeDeliveryChoice deliveryChoice;
 

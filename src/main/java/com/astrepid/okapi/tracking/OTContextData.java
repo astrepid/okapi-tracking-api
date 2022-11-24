@@ -19,33 +19,33 @@ package com.astrepid.okapi.tracking;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * Informations supplémentaires.
+ * Other information.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OTContextData {
 
     /**
-     * Point de retrait.
+     * Removal point.
      */
     private OTRemovalPoint removalPoint;
 
     /**
-     * Services disponibles.
+     * Available services.
      */
     private OTDeliveryChoice deliveryChoice;
 
     /**
-     * Code pays d’origine.
+     * Origin country code.
      */
     private String originCountry;
 
     /**
-     * Code pays destination.
+     * Destination country code.
      */
     private String arrivalCountry;
 
     /**
-     * Info sur poste internationale.
+     * Information about the foreign logistical partner.
      */
     private OTPartner partner;
 

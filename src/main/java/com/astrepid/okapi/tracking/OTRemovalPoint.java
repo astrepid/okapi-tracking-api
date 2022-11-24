@@ -19,16 +19,16 @@ package com.astrepid.okapi.tracking;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * Description du point de retrait.
+ * Removal point.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OTRemovalPoint {
     /**
-     * Nom du point.
+     * Name of the removal point.
      */
     private String name;
     /**
-     * Type de point ('BDP', 'A2P' ...).
+     * Type of point ('BDP', 'A2P' ...).
      */
     private String type;
 

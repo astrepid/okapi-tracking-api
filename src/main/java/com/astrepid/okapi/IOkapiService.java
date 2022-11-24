@@ -23,47 +23,48 @@ import com.astrepid.okapi.tracking.OkapiTracking;
 import java.util.List;
 
 /**
- * Interface d'accès à l'API de La Poste Suivi v2.
+ * Interface for Okapi tracking service.
  *
  * @author Erik
+ * @author Julien
  */
 public interface IOkapiService {
 
     /**
-     * Recherche le suivi d'un envoi.
+     * Search for a tracking.
      *
-     * @param numeroSuivi le numéro de suivi
-     * @return le suivi
-     * @throws OTException en cas d'erreur
+     * @param trackingNumber tracking number
+     * @return the tracking
+     * @throws OTException exception
      */
-    OkapiTracking getTracking(final String numeroSuivi) throws OTException;
+    OkapiTracking getTracking(final String trackingNumber) throws OTException;
 
     /**
-     * Recherche le suivi d'un envoi.
+     * Search for multiple trackings (up to 10)
      *
-     * @param numerosSuivi le numéro de suivi
-     * @return le suivi
-     * @throws OTException en cas d'erreur
+     * @param trackingNumbers tracking numbers
+     * @return the trackings
+     * @throws OTException exception
      */
-    List<OkapiTracking> getTracking(final List<String> numerosSuivi) throws OTException;
+    List<OkapiTracking> getTracking(final List<String> trackingNumbers) throws OTException;
 
     /**
-     * Recherche le suivi d'un envoi.
+     * Search for a tracking.
      *
-     * @param numeroSuivi le numéro de suivi
-     * @param langue      langue de retour souhaitée
-     * @return le suivi
-     * @throws OTException en cas d'erreur
+     * @param trackingNumber tracking number
+     * @param lang language
+     * @return the tracking
+     * @throws OTException exception
      */
-    OkapiTracking getTracking(final String numeroSuivi, final OTLang langue) throws OTException;
+    OkapiTracking getTracking(final String trackingNumber, final OTLang lang) throws OTException;
 
     /**
-     * Recherche le suivi de plusieurs envoi.
+     * Search for multiple trackings (up to 10)
      *
-     * @param numerosSuivi le numéro de suivi
-     * @param langue       langue de retour souhaitée
-     * @return le suivi
-     * @throws OTException en cas d'erreur
+     * @param trackingNumbers tracking numbers
+     * @param lang language
+     * @return the trackings
+     * @throws OTException exception
      */
-    List<OkapiTracking> getTracking(final List<String> numerosSuivi, final OTLang langue) throws OTException;
+    List<OkapiTracking> getTracking(final List<String> trackingNumbers, final OTLang lang) throws OTException;
 }
