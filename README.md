@@ -1,5 +1,8 @@
 # Okapi Tracking API
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.astrepid/okapi-tracking-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.astrepid/okapi-tracking-api)
+
+
 Okapi Tracking API is a simple and resilient wrapper library for the state-owned French logistical carrier's new parcel/mail tracking API (Okapi).
 
 > Click [here](https://developer.laposte.fr/products/suivi/latest) to learn more about the official API.
