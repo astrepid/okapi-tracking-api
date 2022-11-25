@@ -125,10 +125,10 @@ public class OkapiTracking {
     }
 
     /**
-     * @return the idShip. Null si returnCode = 200.
+     * @return the idShip.
      */
     public String getIdShip() {
-        return idShip;
+        return idShip == null ? shipment.getIdShip() : idShip;
     }
 
     /**
