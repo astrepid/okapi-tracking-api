@@ -25,6 +25,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -91,18 +92,18 @@ public class OkapiServiceImpl implements IOkapiService {
     @Override
     public List<OkapiTracking> getTracking(List<String> numerosSuivi, OTLang lang) throws OTException {
         if (numerosSuivi == null || numerosSuivi.isEmpty()) {
-            throw new OTException("La liste des numéros de suivi ne doit pas être vide");
+            throw new OTException("The list of tracking numbers is empty");
         }
 
         // Remove duplicates
         numerosSuivi = numerosSuivi.stream().distinct().collect(Collectors.toList());
 
         if (numerosSuivi.size() == 1) {
-            return List.of(getTracking(numerosSuivi.get(0), lang));
+            return Collections.singletonList(getTracking(numerosSuivi.get(0), lang));
         }
 
         if (numerosSuivi.size() > 10) {
-            throw new OTException("La liste des numéros de suivi ne doit pas dépasser 10 éléments uniques");
+            throw new OTException("The list of tracking numbers must not contain more than 10 elements");
         }
 
         String url = URL + String.join(",", numerosSuivi);

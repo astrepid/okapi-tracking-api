@@ -16,7 +16,6 @@
  */
 package com.astrepid.okapi.tracking;
 
-import java.io.Serial;
 
 /**
  * Exception.
@@ -26,7 +25,6 @@ public class OTException extends Exception {
     /**
      * UID.
      */
-    @Serial
     private static final long serialVersionUID = -3628661762252800339L;
 
     /**

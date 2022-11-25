@@ -6,7 +6,7 @@ Okapi Tracking API is a simple and resilient wrapper library for the state-owned
 
 ## Requirements
 
-- Java 17+;
+- Java 8+
 - Maven 3.8.1+
 - A valid API key (see [Okapi > Applications](https://developer.laposte.fr/applications))
 
