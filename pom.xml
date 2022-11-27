@@ -8,9 +8,9 @@
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
-    <name>Okapi Tracking API v2</name>
-    <description>A simple and resilient wrapper for Okapi's Tracking API v2</description>
-    <url>https://astrepid.com</url>
+    <name>Okapi Tracking API</name>
+    <description>A simple and resilient wrapper library for the new state-owned French logistical carrier parcels and mail tracking API (LaPoste/Okapi — v2)</description>
+    <url>https://astrepid.com/#okapi-tracking-api</url>
 
     <licenses>
         <license>
