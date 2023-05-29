@@ -139,7 +139,7 @@ public class OkapiTracking {
     }
 
     public boolean isSuccess() {
-        return returnCode == 200;
+        return returnCode != null && (returnCode == 200);
     }
 
 }

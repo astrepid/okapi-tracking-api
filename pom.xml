@@ -5,7 +5,7 @@
 
     <groupId>com.astrepid</groupId>
     <artifactId>okapi-tracking-api</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <packaging>jar</packaging>
 
     <name>Okapi Tracking API</name>
